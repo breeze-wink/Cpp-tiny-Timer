@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: Timer
+# Project: C++-tiny-Timer
 # Configurations: Debug
 # =============================================================================
 
@@ -40,39 +40,17 @@ include CMakeFiles/rules.ninja
 # Logical path to working directory; prefix for absolute paths.
 
 cmake_ninja_workdir = /home/breeze/exercise/timer/build/
-# =============================================================================
-# Object build statements for EXECUTABLE target test
-
 
 #############################################
-# Order-only phony target for test
+# Utility command for test
 
-build cmake_object_order_depends_target_test: phony || cmake_object_order_depends_target_multi_thread_timer cmake_object_order_depends_target_time_based_timer
+build CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /home/breeze/exercise/timer/build && /usr/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
 
-build CMakeFiles/test.dir/main.cpp.o: CXX_COMPILER__test_Debug /home/breeze/exercise/timer/main.cpp || cmake_object_order_depends_target_test
-  DEP_FILE = CMakeFiles/test.dir/main.cpp.o.d
-  FLAGS = -g
-  INCLUDES = -I/home/breeze/exercise/timer/multi_thread_timer -I/home/breeze/exercise/timer/utility
-  OBJECT_DIR = CMakeFiles/test.dir
-  OBJECT_FILE_DIR = CMakeFiles/test.dir
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target test
-
-
-#############################################
-# Link the executable ../bin/test
-
-build ../bin/test: CXX_EXECUTABLE_LINKER__test_Debug CMakeFiles/test.dir/main.cpp.o | ../lib/libmulti_thread_timer.a ../lib/libtime_based_timer.so || ../lib/libmulti_thread_timer.a ../lib/libtime_based_timer.so
-  FLAGS = -g
-  LINK_FLAGS = -rdynamic
-  LINK_LIBRARIES = -Wl,-rpath,/home/breeze/exercise/timer/lib  ../lib/libmulti_thread_timer.a  ../lib/libtime_based_timer.so
-  OBJECT_DIR = CMakeFiles/test.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = ../bin/test
-  TARGET_PDB = test.dbg
+build test: phony CMakeFiles/test.util
 
 
 #############################################
@@ -147,6 +125,18 @@ build ../lib/libtime_based_timer.so: CXX_SHARED_LIBRARY_LINKER__time_based_timer
 
 
 #############################################
+# Utility command for test
+
+build time_based_timer/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /home/breeze/exercise/timer/build/time_based_timer && /usr/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build time_based_timer/test: phony time_based_timer/CMakeFiles/test.util
+
+
+#############################################
 # Utility command for edit_cache
 
 build time_based_timer/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
@@ -206,6 +196,18 @@ build ../lib/libmulti_thread_timer.a: CXX_STATIC_LIBRARY_LINKER__multi_thread_ti
 
 
 #############################################
+# Utility command for test
+
+build multi_thread_timer/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /home/breeze/exercise/timer/build/multi_thread_timer && /usr/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build multi_thread_timer/test: phony multi_thread_timer/CMakeFiles/test.util
+
+
+#############################################
 # Utility command for edit_cache
 
 build multi_thread_timer/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
@@ -228,6 +230,154 @@ build multi_thread_timer/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 build multi_thread_timer/rebuild_cache: phony multi_thread_timer/CMakeFiles/rebuild_cache.util
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/breeze/exercise/timer/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target multi_thread_timer_test
+
+
+#############################################
+# Order-only phony target for multi_thread_timer_test
+
+build cmake_object_order_depends_target_multi_thread_timer_test: phony || cmake_object_order_depends_target_multi_thread_timer
+
+build test/multi_thread_timer/CMakeFiles/multi_thread_timer_test.dir/timer_test.cpp.o: CXX_COMPILER__multi_thread_timer_test_Debug /home/breeze/exercise/timer/test/multi_thread_timer/timer_test.cpp || cmake_object_order_depends_target_multi_thread_timer_test
+  DEP_FILE = test/multi_thread_timer/CMakeFiles/multi_thread_timer_test.dir/timer_test.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/home/breeze/exercise/timer/multi_thread_timer -I/home/breeze/exercise/timer/utility
+  OBJECT_DIR = test/multi_thread_timer/CMakeFiles/multi_thread_timer_test.dir
+  OBJECT_FILE_DIR = test/multi_thread_timer/CMakeFiles/multi_thread_timer_test.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target multi_thread_timer_test
+
+
+#############################################
+# Link the executable ../bin/multi_thread_timer_test
+
+build ../bin/multi_thread_timer_test: CXX_EXECUTABLE_LINKER__multi_thread_timer_test_Debug test/multi_thread_timer/CMakeFiles/multi_thread_timer_test.dir/timer_test.cpp.o | ../lib/libmulti_thread_timer.a || ../lib/libmulti_thread_timer.a
+  FLAGS = -g
+  LINK_FLAGS = -rdynamic
+  LINK_LIBRARIES = ../lib/libmulti_thread_timer.a
+  OBJECT_DIR = test/multi_thread_timer/CMakeFiles/multi_thread_timer_test.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = ../bin/multi_thread_timer_test
+  TARGET_PDB = multi_thread_timer_test.dbg
+
+
+#############################################
+# Utility command for test
+
+build test/multi_thread_timer/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /home/breeze/exercise/timer/build/test/multi_thread_timer && /usr/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build test/multi_thread_timer/test: phony test/multi_thread_timer/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build test/multi_thread_timer/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/breeze/exercise/timer/build/test/multi_thread_timer && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build test/multi_thread_timer/edit_cache: phony test/multi_thread_timer/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build test/multi_thread_timer/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/breeze/exercise/timer/build/test/multi_thread_timer && /usr/bin/cmake --regenerate-during-build -S/home/breeze/exercise/timer -B/home/breeze/exercise/timer/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build test/multi_thread_timer/rebuild_cache: phony test/multi_thread_timer/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/breeze/exercise/timer/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target time_based_timer_test
+
+
+#############################################
+# Order-only phony target for time_based_timer_test
+
+build cmake_object_order_depends_target_time_based_timer_test: phony || cmake_object_order_depends_target_time_based_timer
+
+build test/time_based_timer/CMakeFiles/time_based_timer_test.dir/timer_test.cpp.o: CXX_COMPILER__time_based_timer_test_Debug /home/breeze/exercise/timer/test/time_based_timer/timer_test.cpp || cmake_object_order_depends_target_time_based_timer_test
+  DEP_FILE = test/time_based_timer/CMakeFiles/time_based_timer_test.dir/timer_test.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/home/breeze/exercise/timer/time_based_timer -I/home/breeze/exercise/timer/utility
+  OBJECT_DIR = test/time_based_timer/CMakeFiles/time_based_timer_test.dir
+  OBJECT_FILE_DIR = test/time_based_timer/CMakeFiles/time_based_timer_test.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target time_based_timer_test
+
+
+#############################################
+# Link the executable ../bin/time_based_timer_test
+
+build ../bin/time_based_timer_test: CXX_EXECUTABLE_LINKER__time_based_timer_test_Debug test/time_based_timer/CMakeFiles/time_based_timer_test.dir/timer_test.cpp.o | ../lib/libtime_based_timer.so || ../lib/libtime_based_timer.so
+  FLAGS = -g
+  LINK_FLAGS = -rdynamic
+  LINK_LIBRARIES = -Wl,-rpath,/home/breeze/exercise/timer/lib  ../lib/libtime_based_timer.so
+  OBJECT_DIR = test/time_based_timer/CMakeFiles/time_based_timer_test.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = ../bin/time_based_timer_test
+  TARGET_PDB = time_based_timer_test.dbg
+
+
+#############################################
+# Utility command for test
+
+build test/time_based_timer/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /home/breeze/exercise/timer/build/test/time_based_timer && /usr/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build test/time_based_timer/test: phony test/time_based_timer/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build test/time_based_timer/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/breeze/exercise/timer/build/test/time_based_timer && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build test/time_based_timer/edit_cache: phony test/time_based_timer/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build test/time_based_timer/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/breeze/exercise/timer/build/test/time_based_timer && /usr/bin/cmake --regenerate-during-build -S/home/breeze/exercise/timer -B/home/breeze/exercise/timer/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build test/time_based_timer/rebuild_cache: phony test/time_based_timer/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
 # Target aliases.
 
 build libmulti_thread_timer.a: phony ../lib/libmulti_thread_timer.a
@@ -236,9 +386,11 @@ build libtime_based_timer.so: phony ../lib/libtime_based_timer.so
 
 build multi_thread_timer: phony ../lib/libmulti_thread_timer.a
 
-build test: phony ../bin/test
+build multi_thread_timer_test: phony ../bin/multi_thread_timer_test
 
 build time_based_timer: phony ../lib/libtime_based_timer.so
+
+build time_based_timer_test: phony ../bin/time_based_timer_test
 
 # =============================================================================
 # Folder targets.
@@ -248,7 +400,7 @@ build time_based_timer: phony ../lib/libtime_based_timer.so
 #############################################
 # Folder: /home/breeze/exercise/timer/build
 
-build all: phony ../bin/test time_based_timer/all multi_thread_timer/all
+build all: phony time_based_timer/all multi_thread_timer/all test/multi_thread_timer/all test/time_based_timer/all
 
 # =============================================================================
 
@@ -256,6 +408,20 @@ build all: phony ../bin/test time_based_timer/all multi_thread_timer/all
 # Folder: /home/breeze/exercise/timer/build/multi_thread_timer
 
 build multi_thread_timer/all: phony ../lib/libmulti_thread_timer.a
+
+# =============================================================================
+
+#############################################
+# Folder: /home/breeze/exercise/timer/build/test/multi_thread_timer
+
+build test/multi_thread_timer/all: phony ../bin/multi_thread_timer_test
+
+# =============================================================================
+
+#############################################
+# Folder: /home/breeze/exercise/timer/build/test/time_based_timer
+
+build test/time_based_timer/all: phony ../bin/time_based_timer_test
 
 # =============================================================================
 
@@ -276,14 +442,14 @@ build time_based_timer/all: phony ../lib/libtime_based_timer.so
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../multi_thread_timer/CMakeLists.txt ../time_based_timer/CMakeLists.txt /usr/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../multi_thread_timer/CMakeLists.txt ../test/multi_thread_timer/CMakeLists.txt ../test/time_based_timer/CMakeLists.txt ../time_based_timer/CMakeLists.txt /usr/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt ../multi_thread_timer/CMakeLists.txt ../time_based_timer/CMakeLists.txt /usr/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake: phony
+build ../CMakeLists.txt ../multi_thread_timer/CMakeLists.txt ../test/multi_thread_timer/CMakeLists.txt ../test/time_based_timer/CMakeLists.txt ../time_based_timer/CMakeLists.txt /usr/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake: phony
 
 
 #############################################

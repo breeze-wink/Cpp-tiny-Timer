@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/home/breeze/exercise/timer/bin/test"
+			"path" : "/home/breeze/exercise/timer/bin/time_based_timer_test"
 		}
 	],
 	"backtrace" : 1,
@@ -16,7 +16,7 @@
 		],
 		"files" : 
 		[
-			"CMakeLists.txt"
+			"test/time_based_timer/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -26,19 +26,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 16,
+				"line" : 3,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 19,
+				"line" : 7,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 18,
+				"line" : 5,
 				"parent" : 0
 			}
 		]
@@ -56,10 +56,10 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "/home/breeze/exercise/timer/multi_thread_timer"
+					"path" : "/home/breeze/exercise/timer/time_based_timer"
 				},
 				{
-					"backtrace" : 2,
+					"backtrace" : 3,
 					"path" : "/home/breeze/exercise/timer/utility"
 				}
 			],
@@ -83,13 +83,9 @@
 		{
 			"backtrace" : 2,
 			"id" : "time_based_timer::@83816c0b4a64dcffed99"
-		},
-		{
-			"backtrace" : 2,
-			"id" : "multi_thread_timer::@9d7dc8aadc5f00a67990"
 		}
 	],
-	"id" : "test::@6890427a1f51a3e7e1df",
+	"id" : "time_based_timer_test::@06d6c643166a4498f3a1",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -108,23 +104,18 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "../lib/libmulti_thread_timer.a",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 2,
 				"fragment" : "../lib/libtime_based_timer.so",
 				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
-	"name" : "test",
-	"nameOnDisk" : "test",
+	"name" : "time_based_timer_test",
+	"nameOnDisk" : "time_based_timer_test",
 	"paths" : 
 	{
-		"build" : ".",
-		"source" : "."
+		"build" : "test/time_based_timer",
+		"source" : "test/time_based_timer"
 	},
 	"sourceGroups" : 
 	[
@@ -141,7 +132,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "main.cpp",
+			"path" : "test/time_based_timer/timer_test.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

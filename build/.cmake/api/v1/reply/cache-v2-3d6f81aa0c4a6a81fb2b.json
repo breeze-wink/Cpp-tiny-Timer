@@ -2,6 +2,42 @@
 	"entries" : 
 	[
 		{
+			"name" : "C++-tiny-Timer_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/breeze/exercise/timer/build"
+		},
+		{
+			"name" : "C++-tiny-Timer_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "C++-tiny-Timer_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/breeze/exercise/timer"
+		},
+		{
 			"name" : "CMAKE_ADDR2LINE",
 			"properties" : 
 			[
@@ -739,7 +775,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "3"
+			"value" : "5"
 		},
 		{
 			"name" : "CMAKE_OBJCOPY",
@@ -795,7 +831,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : ""
+			"value" : "try to implement a Cpp Timer, and with the development of use, improve it gragually."
 		},
 		{
 			"name" : "CMAKE_PROJECT_HOMEPAGE_URL",
@@ -807,7 +843,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : ""
+			"value" : "https://github.com/breeze-wink/Cpp-tiny-Timer"
 		},
 		{
 			"name" : "CMAKE_PROJECT_NAME",
@@ -819,7 +855,67 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "Timer"
+			"value" : "C++-tiny-Timer"
+		},
+		{
+			"name" : "CMAKE_PROJECT_VERSION",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "0.1.0"
+		},
+		{
+			"name" : "CMAKE_PROJECT_VERSION_MAJOR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "0"
+		},
+		{
+			"name" : "CMAKE_PROJECT_VERSION_MINOR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "1"
+		},
+		{
+			"name" : "CMAKE_PROJECT_VERSION_PATCH",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "0"
+		},
+		{
+			"name" : "CMAKE_PROJECT_VERSION_TWEAK",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1102,7 +1198,7 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "Timer_BINARY_DIR",
+			"name" : "multi_thread_timer_test_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1111,10 +1207,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/breeze/exercise/timer/build"
+			"value" : "/home/breeze/exercise/timer/build/test/multi_thread_timer"
 		},
 		{
-			"name" : "Timer_IS_TOP_LEVEL",
+			"name" : "multi_thread_timer_test_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1123,10 +1219,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "ON"
+			"value" : "OFF"
 		},
 		{
-			"name" : "Timer_SOURCE_DIR",
+			"name" : "multi_thread_timer_test_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1135,7 +1231,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/breeze/exercise/timer"
+			"value" : "/home/breeze/exercise/timer/test/multi_thread_timer"
 		},
 		{
 			"name" : "time_based_timer_BINARY_DIR",
@@ -1172,6 +1268,42 @@
 			],
 			"type" : "STATIC",
 			"value" : "/home/breeze/exercise/timer/time_based_timer"
+		},
+		{
+			"name" : "time_based_timer_test_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/breeze/exercise/timer/build/test/time_based_timer"
+		},
+		{
+			"name" : "time_based_timer_test_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "OFF"
+		},
+		{
+			"name" : "time_based_timer_test_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/breeze/exercise/timer/test/time_based_timer"
 		}
 	],
 	"kind" : "cache",

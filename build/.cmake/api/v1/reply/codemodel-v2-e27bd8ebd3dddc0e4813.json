@@ -9,7 +9,9 @@
 					"childIndexes" : 
 					[
 						1,
-						2
+						2,
+						3,
+						4
 					],
 					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
@@ -17,11 +19,7 @@
 						"string" : "3.0"
 					},
 					"projectIndex" : 0,
-					"source" : ".",
-					"targetIndexes" : 
-					[
-						1
-					]
+					"source" : "."
 				},
 				{
 					"build" : "time_based_timer",
@@ -52,6 +50,36 @@
 					[
 						0
 					]
+				},
+				{
+					"build" : "test/multi_thread_timer",
+					"jsonFile" : "directory-test.multi_thread_timer-Debug-b07be1374895f5f3bcd4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "test/multi_thread_timer",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "test/time_based_timer",
+					"jsonFile" : "directory-test.time_based_timer-Debug-15684f87495a17a273a3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "test/time_based_timer",
+					"targetIndexes" : 
+					[
+						3
+					]
 				}
 			],
 			"name" : "Debug",
@@ -60,18 +88,19 @@
 				{
 					"childIndexes" : 
 					[
-						1
+						1,
+						2,
+						3
 					],
 					"directoryIndexes" : 
 					[
 						0,
 						2
 					],
-					"name" : "Timer",
+					"name" : "C++-tiny-Timer",
 					"targetIndexes" : 
 					[
-						0,
-						1
+						0
 					]
 				},
 				{
@@ -85,6 +114,30 @@
 					[
 						2
 					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "multi_thread_timer_test",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "time_based_timer_test",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3
+					]
 				}
 			],
 			"targets" : 
@@ -97,11 +150,11 @@
 					"projectIndex" : 0
 				},
 				{
-					"directoryIndex" : 0,
-					"id" : "test::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-test-Debug-bfa7b38e5ca167915988.json",
-					"name" : "test",
-					"projectIndex" : 0
+					"directoryIndex" : 3,
+					"id" : "multi_thread_timer_test::@e0fd9a0f0025d9122cc8",
+					"jsonFile" : "target-multi_thread_timer_test-Debug-d7c0134e64dfe2b57965.json",
+					"name" : "multi_thread_timer_test",
+					"projectIndex" : 2
 				},
 				{
 					"directoryIndex" : 1,
@@ -109,6 +162,13 @@
 					"jsonFile" : "target-time_based_timer-Debug-9825c6cb0421e7c2d916.json",
 					"name" : "time_based_timer",
 					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "time_based_timer_test::@06d6c643166a4498f3a1",
+					"jsonFile" : "target-time_based_timer_test-Debug-1d9d9863819e8ca118b0.json",
+					"name" : "time_based_timer_test",
+					"projectIndex" : 3
 				}
 			]
 		}

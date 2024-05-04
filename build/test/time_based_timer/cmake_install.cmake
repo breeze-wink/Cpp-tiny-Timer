@@ -1,4 +1,4 @@
-# Install script for directory: /home/breeze/exercise/timer/utility
+# Install script for directory: /home/breeze/exercise/timer/test/time_based_timer
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

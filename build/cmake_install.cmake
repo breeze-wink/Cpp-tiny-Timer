@@ -46,6 +46,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/breeze/exercise/timer/build/time_based_timer/cmake_install.cmake")
   include("/home/breeze/exercise/timer/build/multi_thread_timer/cmake_install.cmake")
+  include("/home/breeze/exercise/timer/build/test/multi_thread_timer/cmake_install.cmake")
+  include("/home/breeze/exercise/timer/build/test/time_based_timer/cmake_install.cmake")
 
 endif()
 
