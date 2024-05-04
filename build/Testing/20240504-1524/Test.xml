@@ -24,39 +24,11 @@
 	ProcessorClockFrequency="2200"
 	>
 	<Testing>
-		<StartDateTime>May 05 00:21 CST</StartDateTime>
-		<StartTestTime>1714839661</StartTestTime>
-		<TestList>
-			<Test>./test/time_based_timer/time_based_timer_test</Test>
-		</TestList>
-		<Test Status="passed">
-			<Name>time_based_timer_test</Name>
-			<Path>./test/time_based_timer</Path>
-			<FullName>./test/time_based_timer/time_based_timer_test</FullName>
-			<FullCommandLine>/home/breeze/exercise/timer/bin/time_based_timer_test</FullCommandLine>
-			<Results>
-				<NamedMeasurement type="numeric/double" name="Execution Time">
-					<Value>0.00288071</Value>
-				</NamedMeasurement>
-				<NamedMeasurement type="numeric/double" name="Processors">
-					<Value>1</Value>
-				</NamedMeasurement>
-				<NamedMeasurement type="text/string" name="Completion Status">
-					<Value>Completed</Value>
-				</NamedMeasurement>
-				<NamedMeasurement type="text/string" name="Command Line">
-					<Value>/home/breeze/exercise/timer/bin/time_based_timer_test</Value>
-				</NamedMeasurement>
-				<NamedMeasurement type="text/string" name="Environment">
-					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
-				</NamedMeasurement>
-				<Measurement>
-					<Value></Value>
-				</Measurement>
-			</Results>
-		</Test>
-		<EndDateTime>May 05 00:21 CST</EndDateTime>
-		<EndTestTime>1714839661</EndTestTime>
+		<StartDateTime>May 05 00:44 CST</StartDateTime>
+		<StartTestTime>1714841079</StartTestTime>
+		<TestList/>
+		<EndDateTime>May 05 00:44 CST</EndDateTime>
+		<EndTestTime>1714841079</EndTestTime>
 		<ElapsedMinutes>0</ElapsedMinutes>
 	</Testing>
 </Site>

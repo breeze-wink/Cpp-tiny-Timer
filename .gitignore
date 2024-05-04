@@ -1,84 +1,11 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
-# Build folders
+# Ignore directory contents by ending the pattern with a slash
 bin/
-obj/
 build/
-debug/
-release/
 
-# Backup files
-*~
-*.bak
-*.swp
+# Ignore files with specific names
+*.cache
+
+# It is common to ignore log files, temporary files, etc.
+*.log
 *.tmp
-
-# Other files to ignore
-.DS_Store
-Thumbs.db
-
-# Dependency directories
-deps/
-vendor/
-
-# Tooling configuration
-*.clang-format
-*.clang-tidy
-
-# IDEs and editors
-## Visual Studio Code
-.vscode/
-## Visual Studio
-.vs/
-*.vcxproj
-*.vcxproj.filters
-*.vcxproj.user
-*.sdf
-*.suo
-*.opensdf
-*.opendb
-ipch/
-## Eclipse
-.settings/
-## CLion
-.idea/
-## Qt Creator
-*.pro.user
-*.pro.user.*
-
-# CMake generated files
-CMakeCache.txt
-CMakeFiles/
-cmake-build-debug/
-cmake-build-release/
-CMakeScripts/
-*.cmake
-Makefile
+*.temp
