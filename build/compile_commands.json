@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/home/breeze/exercise/timer/build",
+  "command": "/usr/bin/g++ -I/home/breeze/exercise/timer/multi_thread_timer -I/home/breeze/exercise/timer/utility -g -o CMakeFiles/test.dir/main.cpp.o -c /home/breeze/exercise/timer/main.cpp",
+  "file": "/home/breeze/exercise/timer/main.cpp"
+},
+{
+  "directory": "/home/breeze/exercise/timer/build",
+  "command": "/usr/bin/g++ -Dtime_based_timer_EXPORTS -I/home/breeze/exercise/timer/utility -g -fPIC -o time_based_timer/CMakeFiles/time_based_timer.dir/time_manager.cpp.o -c /home/breeze/exercise/timer/time_based_timer/time_manager.cpp",
+  "file": "/home/breeze/exercise/timer/time_based_timer/time_manager.cpp"
+},
+{
+  "directory": "/home/breeze/exercise/timer/build",
+  "command": "/usr/bin/g++ -Dtime_based_timer_EXPORTS -I/home/breeze/exercise/timer/utility -g -fPIC -o time_based_timer/CMakeFiles/time_based_timer.dir/timer.cpp.o -c /home/breeze/exercise/timer/time_based_timer/timer.cpp",
+  "file": "/home/breeze/exercise/timer/time_based_timer/timer.cpp"
+},
+{
+  "directory": "/home/breeze/exercise/timer/build",
+  "command": "/usr/bin/g++ -g -o multi_thread_timer/CMakeFiles/multi_thread_timer.dir/timer.cpp.o -c /home/breeze/exercise/timer/multi_thread_timer/timer.cpp",
+  "file": "/home/breeze/exercise/timer/multi_thread_timer/timer.cpp"
+}
+]

@@ -1,0 +1,5 @@
+# ninja log v5
+1	422	1714819477678252375	utility/CMakeFiles/multi_thread_timer.dir/timer.cpp.o	d05650fc48ca39e6
+423	483	1714819477738253527	../lib/libmulti_thread_timer.a	381eea9b7f8d2bcf
+821	933	1714820022888791654	../bin/test	eedc91b911752fcb
+1	821	1714820022776789486	CMakeFiles/test.dir/main.cpp.o	f4ef3eac12918020
